@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="com.starterkit2.view">
+      </category>
+      <view
+            name="Sample View"
+            icon="icons/sample.gif"
+            category="com.starterkit2.view"
+            class="com.starterkit2.view.views.SampleView"
+            id="com.starterkit2.view.views.SampleView">
+      </view>
+      <view
+            class="com.starterkit2.view.ViewPart1"
+            id="com.starterkit2.view.view1"
+            name="SK"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="com.starterkit2.view.perspective1">
+         <view
+               ratio="1.0"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               id="com.starterkit2.view.views.SampleView">
+         </view>
+         <view
+               id="com.starterkit2.view.view1"
+               minimized="false"
+               ratio="0.5"
+               relationship="right"
+               relative="com.starterkit2.view.views.SampleView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.starterkit2.view.PerspectiveFactory1"
+            id="com.starterkit2.view.perspective1"
+            name="My Perspectiv">
+      </perspective>
+   </extension>
+
+</plugin>

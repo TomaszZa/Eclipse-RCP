@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="false" key="generateActivator"/>
+	<item value="3.5 or greater" key="targetName"/>
+	<item value="false" key="uiPlugin"/>
+	<item value="false" key="apiAnalysis"/>
+	<item value="false" key="rcpPlugin"/>
+	<item value="false" key="osgiProject"/>
+	<list key="providers">
+		<item value="STARTERKIT2"/>
+	</list>
+	<section name="PDEFormActionManager">
+	</section>
+	<section name="JavaAttributeWizard">
+		<section name="NewClassWizardPage">
+			<item value="true" key="create_constructor"/>
+			<item value="true" key="create_unimplemented"/>
+		</section>
+	</section>
+	<section name="ProductExportWizard">
+		<item value="C:\Users\tozabloc\Desktop\WorspaceGosia" key="destination0"/>
+		<item value="true" key="syncProduct"/>
+		<item value="C:\Users\tozabloc\Desktop\WorspaceGosia" key="destination1"/>
+		<item value="true" key="allowBinaryCycles"/>
+		<item value="Generate source bundles" key="exportSourceFormat"/>
+		<item value="/com.starterkit2.rcpapp/src/com/starterkit2/rcpapp/cpapp.product" key="productConfig1"/>
+		<item value="eclipse" key="productRoot"/>
+		<item value="/com.starterkit2.rcpapp/src/com/starterkit2/rcpapp/cpapp.product" key="productConfig0"/>
+		<item value="false" key="exportSource"/>
+		<item value="true" key="exportDirectory"/>
+		<item value="true" key="p2metadata"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="pluginsView">
+	</section>
+</section>
