@@ -7,13 +7,6 @@ public class Tasks extends ModelObject{
 	private List<Task> tasks = new ArrayList<Task>();
 	private Task toEditOrDelete;
 	
-	public Task getToEditOrDelete(){
-		return toEditOrDelete;
-	}
-	public void setToEditOrDelete(Task toEditOrDelete){
-		this.toEditOrDelete = toEditOrDelete;
-	}
-	
 	public List<Task> getTasks(){
 		return tasks;
 	}

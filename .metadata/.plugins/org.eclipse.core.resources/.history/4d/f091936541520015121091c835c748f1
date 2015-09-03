@@ -137,7 +137,7 @@ public class ToDoList extends ViewPart {
 	    btnDelete.addSelectionListener(new SelectionAdapter() {
 	    	@Override
 	    	public void widgetSelected(SelectionEvent e){
-	    		tasks.getToEditOrDelete().setTaskName(textToEdit.getText());
+	    	
 	    	}
 	    });
 	    btnDelete.setText("Delete");

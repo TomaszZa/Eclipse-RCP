@@ -48,10 +48,6 @@ public class ToDoList extends ViewPart {
 
 	@Override
 	public void createPartControl(Composite parent) {
-		//task list
-		final Tasks tasks = new Tasks();
-		
-		
 		parent.setToolTipText("");
 		parent.setBackground(SWTResourceManager.getColor(SWT.COLOR_LIST_BACKGROUND));
 		parent.setLayout(null);
@@ -90,7 +86,7 @@ public class ToDoList extends ViewPart {
 		    @Override
 		    public void handleEvent(Event event) {
 		    	Task toEdit = (Task) event.item.getData();
-		    	tasks.setToEditOrDelete(toEdit);		    	
+		    	toEdit.setTaskName("Innien");
 		    }
 		});
 		tableActual.setLinesVisible(true);
@@ -114,6 +110,7 @@ public class ToDoList extends ViewPart {
 		Button btnAdd = new Button(parent, SWT.NONE);
 		btnAdd.setBounds(5, 5, 81, 25);
 		
+		final Tasks tasks = new Tasks();
 		//add button
 		tasks.getTasks().add(new Task("cos"));
 		btnAdd.addSelectionListener(new SelectionAdapter() {
@@ -137,7 +134,7 @@ public class ToDoList extends ViewPart {
 	    btnDelete.addSelectionListener(new SelectionAdapter() {
 	    	@Override
 	    	public void widgetSelected(SelectionEvent e){
-	    		tasks.getToEditOrDelete().setTaskName(textToEdit.getText());
+	    	
 	    	}
 	    });
 	    btnDelete.setText("Delete");

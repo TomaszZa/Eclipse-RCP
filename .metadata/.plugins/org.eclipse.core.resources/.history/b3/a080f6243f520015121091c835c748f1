@@ -48,10 +48,6 @@ public class ToDoList extends ViewPart {
 
 	@Override
 	public void createPartControl(Composite parent) {
-		//task list
-		final Tasks tasks = new Tasks();
-		
-		
 		parent.setToolTipText("");
 		parent.setBackground(SWTResourceManager.getColor(SWT.COLOR_LIST_BACKGROUND));
 		parent.setLayout(null);
@@ -79,9 +75,6 @@ public class ToDoList extends ViewPart {
 			}
 		});
 		btnModyfie.setText("Modify");
-		//text to be new title
-		textToEdit = new Text(parent, SWT.BORDER);
-		textToEdit.setBounds(91, 34, 393, 21);
 		//actual table
 		final TableViewer tableViewer = new TableViewer(parent, SWT.BORDER | SWT.FULL_SELECTION);
 		tableActual = tableViewer.getTable();
@@ -89,8 +82,8 @@ public class ToDoList extends ViewPart {
 		tableActual.addListener(SWT.Selection, new Listener() {
 		    @Override
 		    public void handleEvent(Event event) {
-		    	Task toEdit = (Task) event.item.getData();
-		    	tasks.setToEditOrDelete(toEdit);		    	
+		    	public Task toEdit = (Task) event.item.getData();
+		    	toEdit.setTaskName("Innien");
 		    }
 		});
 		tableActual.setLinesVisible(true);
@@ -103,6 +96,8 @@ public class ToDoList extends ViewPart {
 		tableMade.setHeaderVisible(true);
 		tableMade.setBounds(315, 70, 274, 389);
 		
+		textToEdit = new Text(parent, SWT.BORDER);
+		textToEdit.setBounds(91, 34, 393, 21);
 		
 		//binding
 		final Task task = new Task();
@@ -114,6 +109,7 @@ public class ToDoList extends ViewPart {
 		Button btnAdd = new Button(parent, SWT.NONE);
 		btnAdd.setBounds(5, 5, 81, 25);
 		
+		final Tasks tasks = new Tasks();
 		//add button
 		tasks.getTasks().add(new Task("cos"));
 		btnAdd.addSelectionListener(new SelectionAdapter() {
@@ -137,7 +133,7 @@ public class ToDoList extends ViewPart {
 	    btnDelete.addSelectionListener(new SelectionAdapter() {
 	    	@Override
 	    	public void widgetSelected(SelectionEvent e){
-	    		tasks.getToEditOrDelete().setTaskName(textToEdit.getText());
+	    	
 	    	}
 	    });
 	    btnDelete.setText("Delete");
