@@ -1,0 +1,33 @@
+package com.starterkit2.view;
+
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.ui.part.ViewPart;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.List;
+import org.eclipse.swt.widgets.Table;
+
+public class ToDoList extends ViewPart {
+	private Table table;
+
+	public ToDoList() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void createPartControl(Composite parent) {
+		
+		table = new Table(parent, SWT.BORDER);
+		table.setHeaderVisible(true);
+		table.setLinesVisible(true);
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setFocus() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

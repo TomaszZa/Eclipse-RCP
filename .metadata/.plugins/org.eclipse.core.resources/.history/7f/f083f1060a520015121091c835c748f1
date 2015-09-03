@@ -1,0 +1,6 @@
+package com.starterkit2.view.model;
+
+public class Task {
+	private String taskName;
+
+}

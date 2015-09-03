@@ -1,0 +1,6 @@
+package com.starterkit2.view.model;
+
+public class Tasks {
+	private List<Task> tasks = new ArrayList<Task>();
+
+}

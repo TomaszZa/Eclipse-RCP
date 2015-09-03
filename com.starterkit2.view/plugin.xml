@@ -16,9 +16,10 @@
             id="com.starterkit2.view.views.SampleView">
       </view>
       <view
-            class="com.starterkit2.view.ViewPart1"
+            class="com.starterkit2.view.ToDoList"
+            icon="icons/sample.gif"
             id="com.starterkit2.view.view1"
-            name="SK"
+            name="ToDoList"
             restorable="true">
       </view>
    </extension>
