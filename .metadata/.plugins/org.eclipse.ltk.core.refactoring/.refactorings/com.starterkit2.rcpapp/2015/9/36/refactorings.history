@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;com.starterkit2.rcpapp&apos;&#x0D;&#x0A;- Original project: &apos;com.starterkit2.rcpapp&apos;&#x0D;&#x0A;- Original element: &apos;cpapp.product&apos;" description="Delete element" element1="src/com/starterkit2/rcpapp/cpapp.product" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1441370882238" subPackages="false" version="1.0"/>
+</session>

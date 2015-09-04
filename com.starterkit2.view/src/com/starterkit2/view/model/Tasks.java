@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tasks extends ModelObject{
-	private List<Task> tasks = new ArrayList<Task>();
+	private List<Task> actualTasks = new ArrayList<Task>();
+	private List<Task> madeTasks = new ArrayList<Task>();
 	private Task toEditOrDelete;
 	
 	public Task getToEditOrDelete(){
@@ -14,17 +15,29 @@ public class Tasks extends ModelObject{
 		this.toEditOrDelete = toEditOrDelete;
 	}
 	
-	public List<Task> getTasks(){
-		return tasks;
+	public List<Task> getActualTasks(){
+		return actualTasks;
 	}
-	public void setTasks(List<Task> tasks){
-		this.tasks = tasks;
+	public void setActualTasks(List<Task> actualTasks){
+		this.actualTasks = actualTasks;
 	}
-	public void addTask(Task task){
-		tasks.add(task);
+	public void addTaskToActualTasks(Task task){
+		actualTasks.add(task);
 	}
-	public void removeTask(Task task){
-		tasks.remove(task);
+	public void removeTaskFromActualTasks(Task task){
+		actualTasks.remove(task);
+	}
+	public List<Task> getMadeTasks(){
+		return madeTasks;
+	}
+	public void setMadeTasks(List<Task> madeTasks){
+		this.madeTasks = madeTasks;
+	}
+	public void addTaskToMadeTasks(Task task){
+		madeTasks.add(task);
+	}
+	public void removeTaskFromMadeTasks(Task task){
+		madeTasks.remove(task);
 	}
 
 }

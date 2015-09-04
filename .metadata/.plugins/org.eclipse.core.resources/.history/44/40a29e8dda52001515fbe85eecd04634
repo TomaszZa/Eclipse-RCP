@@ -1,0 +1,31 @@
+package com.starterkit2.view.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Tasks extends ModelObject{
+	private List<Task> actualTasks = new ArrayList<Task>();
+	private List<Task> madTasks = new ArrayList<Task>();
+	private Task toEditOrDelete;
+	
+	public Task getToEditOrDelete(){
+		return toEditOrDelete;
+	}
+	public void setToEditOrDelete(Task toEditOrDelete){
+		this.toEditOrDelete = toEditOrDelete;
+	}
+	
+	public List<Task> getActualTasks(){
+		return actualTasks;
+	}
+	public void setActualTasks(List<Task> tasks){
+		this.actualTasks = tasks;
+	}
+	public void addTaskToActualTasks(Task task){
+		actualTasks.add(task);
+	}
+	public void removeTaskFromActualTasks(Task task){
+		actualTasks.remove(task);
+	}
+
+}

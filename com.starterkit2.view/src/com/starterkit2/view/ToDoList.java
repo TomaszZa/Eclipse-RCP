@@ -57,28 +57,21 @@ public class ToDoList extends ViewPart {
 		parent.setLayout(null);
 		//Text fiel 1
 		Label lblTable2Name = new Label(parent, SWT.NONE);
+		lblTable2Name.setBackground(SWTResourceManager.getColor(SWT.COLOR_LIST_BACKGROUND));
 		lblTable2Name.setAlignment(SWT.CENTER);
-		lblTable2Name.setBounds(320, 70, 269, 15);
+		lblTable2Name.setBounds(328, 76, 256, 15);
 		lblTable2Name.setText("Wykonane Zadania:");
 		//text field 2
 		Label lblTable1Name = new Label(parent, SWT.NONE);
+		lblTable1Name.setBackground(SWTResourceManager.getColor(SWT.COLOR_LIST_BACKGROUND));
 		lblTable1Name.setAlignment(SWT.CENTER);
-		lblTable1Name.setBounds(10, 70, 272, 15);
+		lblTable1Name.setBounds(21, 76, 252, 15);
 		lblTable1Name.setText("Aktualne Zadania:");
 		
 		
 		newTask = new Text(parent, SWT.BORDER);
 		newTask.setBounds(91, 7, 393, 21);
 		
-		//modyfie button
-		Button btnModyfie = new Button(parent, SWT.NONE);
-		btnModyfie.setBounds(539, 5, 50, 25);
-		btnModyfie.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-			}
-		});
-		btnModyfie.setText("Modify");
 		//text to be new title
 		textToEdit = new Text(parent, SWT.BORDER);
 		textToEdit.setBounds(91, 34, 393, 21);
@@ -95,13 +88,13 @@ public class ToDoList extends ViewPart {
 		});
 		tableActual.setLinesVisible(true);
 		tableActual.setHeaderVisible(true);
-		tableActual.setBounds(10, 70, 277, 389);
+		tableActual.setBounds(10, 97, 277, 362);
 		//made table
-		TableViewer tableViewer_1 = new TableViewer(parent, SWT.BORDER | SWT.FULL_SELECTION);
+		final TableViewer tableViewer_1 = new TableViewer(parent, SWT.BORDER | SWT.FULL_SELECTION);
 		tableMade = tableViewer_1.getTable();
 		tableMade.setLinesVisible(true);
 		tableMade.setHeaderVisible(true);
-		tableMade.setBounds(315, 70, 274, 389);
+		tableMade.setBounds(315, 97, 274, 362);
 		
 		
 		//binding
@@ -115,20 +108,24 @@ public class ToDoList extends ViewPart {
 		btnAdd.setBounds(5, 5, 81, 25);
 		
 		//add button
-		tasks.getTasks().add(new Task("cos"));
 		btnAdd.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				tasks.addTask(new Task(task.getTaskName()));
+				tasks.addTaskToActualTasks(new Task(task.getTaskName()));
 				tableViewer.refresh();
 			}
 		});
 		btnAdd.setText("Add");
 		
-		//binding taskow w tabeli z lista taskow
-		WritableList input = new WritableList(tasks.getTasks(), Task.class);		
+		//binding aktualnych taskow w tabeli z lista taskow
+		WritableList input = new WritableList(tasks.getActualTasks(), Task.class);		
 	    ViewerSupport.bind(tableViewer,
 	        input,
+	        BeanProperties.values(new String[] { "taskName"}));
+		//binding zrobionych taskow w tabeli z lista taskow
+		WritableList input1 = new WritableList(tasks.getMadeTasks(), Task.class);		
+	    ViewerSupport.bind(tableViewer_1,
+	        input1,
 	        BeanProperties.values(new String[] { "taskName"}));
 	    
 	    //delete button
@@ -137,10 +134,38 @@ public class ToDoList extends ViewPart {
 	    btnDelete.addSelectionListener(new SelectionAdapter() {
 	    	@Override
 	    	public void widgetSelected(SelectionEvent e){
-	    		tasks.getToEditOrDelete().setTaskName(textToEdit.getText());
+	    		tasks.getActualTasks().remove(tasks.getToEditOrDelete());
+	    		tableViewer.refresh();
 	    	}
 	    });
 	    btnDelete.setText("Delete");
+	    //modyfie button
+	    Button btnModyfie = new Button(parent, SWT.NONE);
+	    btnModyfie.setBounds(539, 5, 50, 25);
+	    btnModyfie.addSelectionListener(new SelectionAdapter() {
+	    	@Override
+	    	public void widgetSelected(SelectionEvent e) {
+	    		tasks.getToEditOrDelete().setTaskName(textToEdit.getText());
+	    		tableViewer.refresh();
+	    	}
+	    });
+	    btnModyfie.setText("Modify");
+	    //button adding tusk to made
+	    Button btnMadeTask = new Button(parent, SWT.NONE);
+	    btnMadeTask.setBounds(490, 34, 94, 21);
+	    btnMadeTask.addSelectionListener(new SelectionAdapter() {
+	    	@Override
+	    	public void widgetSelected(SelectionEvent e){
+
+	    		
+	    		tasks.getMadeTasks().add(tasks.getToEditOrDelete());
+	    		tasks.getActualTasks().remove(tasks.getToEditOrDelete());
+	    		
+	    		tableViewer.refresh();
+	    		tableViewer_1.refresh();	
+	    	}
+		});
+	    btnMadeTask.setText("Add Made");
 	}
 	
 	@Override
