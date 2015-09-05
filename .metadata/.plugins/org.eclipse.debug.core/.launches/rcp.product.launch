@@ -2,7 +2,7 @@
 <launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
 <booleanAttribute key="append.args" value="true"/>
 <stringAttribute key="application" value="com.starterkit2.rcpapp.application"/>
-<booleanAttribute key="askclear" value="true"/>
+<booleanAttribute key="askclear" value="false"/>
 <booleanAttribute key="automaticAdd" value="false"/>
 <booleanAttribute key="automaticValidate" value="false"/>
 <stringAttribute key="bootstrap" value=""/>

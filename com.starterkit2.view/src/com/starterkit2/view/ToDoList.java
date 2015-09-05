@@ -20,6 +20,7 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.wb.swt.SWTResourceManager;
+import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.BeanProperties;
 import org.eclipse.core.databinding.observable.list.WritableList;
@@ -33,6 +34,7 @@ import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.ViewerCell;
 
+import com.starterkit2.view.handlers.AddHandler;
 import com.starterkit2.view.model.Task;
 import com.starterkit2.view.model.Tasks;
 
@@ -49,8 +51,7 @@ public class ToDoList extends ViewPart {
 	@Override
 	public void createPartControl(Composite parent) {
 		//task list
-		final Tasks tasks = new Tasks();
-		
+		final Tasks tasks = Tasks.getInstance();
 		
 		parent.setToolTipText("");
 		parent.setBackground(SWTResourceManager.getColor(SWT.COLOR_LIST_BACKGROUND));

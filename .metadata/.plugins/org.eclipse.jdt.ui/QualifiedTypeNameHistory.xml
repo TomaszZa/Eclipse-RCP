@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="org.eclipse.jface.viewers.IStructuredSelection"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.viewers.SelectionChangedEvent"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.viewers.ISelectionChangedListener"/>
-<fullyQualifiedTypeName name="com.starterkit2.view.model.Tasks"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.eclipse.core.databinding.DataBindingContext"/>
 <fullyQualifiedTypeName name="org.eclipse.core.databinding.observable.value.IObservableValue"/>
@@ -18,10 +17,12 @@
 <fullyQualifiedTypeName name="org.eclipse.jface.viewers.TableViewer"/>
 <fullyQualifiedTypeName name="org.eclipse.core.databinding.observable.list.WritableList"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.databinding.viewers.ViewerSupport"/>
-<fullyQualifiedTypeName name="org.eclipse.swt.events.SelectionAdapter"/>
 <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Listener"/>
 <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Event"/>
 <fullyQualifiedTypeName name="java.awt.Point"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.viewers.ViewerCell"/>
 <fullyQualifiedTypeName name="org.eclipse.swt.graphics.Point"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.events.SelectionAdapter"/>
+<fullyQualifiedTypeName name="com.starterkit2.view.model.Tasks"/>
+<fullyQualifiedTypeName name="com.starterkit2.view.handlers.AddHandler"/>
 </qualifiedTypeNameHistroy>

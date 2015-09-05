@@ -13,9 +13,13 @@
 	</section>
 	<section name="JavaAttributeWizard">
 		<section name="NewClassWizardPage">
-			<item value="true" key="create_constructor"/>
+			<item value="false" key="create_constructor"/>
 			<item value="true" key="create_unimplemented"/>
 		</section>
+	</section>
+	<section name="pde-form-editor">
+		<item value="plugin-context" key="org.eclipse.pde.ui.manifestEditor"/>
+		<item value="overview" key="org.eclipse.pde.ui.schemaEditor"/>
 	</section>
 	<section name="ProductExportWizard">
 		<item value="C:\Users\tozabloc\Desktop\WorspaceGosia" key="destination0"/>

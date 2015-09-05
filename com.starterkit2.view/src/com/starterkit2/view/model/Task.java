@@ -4,8 +4,8 @@ public class Task extends ModelObject{
 	private String taskName;
 	
 	public Task(){
-		
 	}
+	
 	public Task(String taskName){
 		this.taskName = taskName;
 	}

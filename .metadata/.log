@@ -4596,3 +4596,331 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-09-04 17:08:08.581
+!MESSAGE 2 threads could not be stopped
+!SESSION 2015-09-04 21:38:40.389 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.rcp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.rcp.product
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2015-09-04 21:39:02.214
+!MESSAGE Nothing to merge for "platform:/plugin/org.eclipse.e4.tools.emf.ui/fragment.e4xmi"
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2015-09-04 21:39:02.214
+!MESSAGE Nothing to merge for "platform:/plugin/org.eclipse.e4.tools.emf.ui/fragment.e4xmi"
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-04 21:39:13.994
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-04 21:39:14.009
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tozabloc'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2015-09-04 23:49:46.530
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:62)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:247)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:229)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:149)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:499)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:286)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:507)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:558)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:378)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$0(KeyBindingDispatcher.java:324)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:86)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1262)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1112)
+	at org.eclipse.swt.widgets.Text.sendKeyEvent(Text.java:1734)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1108)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1529)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4722)
+	at org.eclipse.swt.widgets.Text.WM_CHAR(Text.java:2624)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4610)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2610)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.setReplacementLength(AbstractJavaCompletionProposal.java:694)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeCompletionProposal.<init>(TypeCompletionProposal.java:66)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeCompletionProposal.<init>(TypeCompletionProposal.java:57)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.addProposalToCollection(TypePackageCompletionProcessor.java:247)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor$1.acceptType(TypePackageCompletionProcessor.java:194)
+	at org.eclipse.jdt.internal.core.search.TypeNameRequestorWrapper.acceptType(TypeNameRequestorWrapper.java:45)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine$3.acceptIndexMatch(BasicSearchEngine.java:1125)
+	at org.eclipse.jdt.core.search.SearchPattern.acceptMatch(SearchPattern.java:298)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2321)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:273)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:109)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:65)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:277)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1136)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:746)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.generateTypeProposals(TypePackageCompletionProcessor.java:199)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.generateProposals(TypePackageCompletionProcessor.java:121)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.generateTypePackageProposals(TypePackageCompletionProcessor.java:76)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeContentProposalProvider.generateContentProposals(TypeContentProposalProvider.java:120)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeContentProposalProvider.getProposals(TypeContentProposalProvider.java:80)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.getProposals(ContentProposalAdapter.java:2057)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.openProposalPopup(ContentProposalAdapter.java:1903)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.openProposalPopup(ContentProposalAdapter.java:1934)
+	at org.eclipse.ui.fieldassist.ContentAssistCommandAdapter.access$0(ContentAssistCommandAdapter.java:1)
+	at org.eclipse.ui.fieldassist.ContentAssistCommandAdapter$1.execute(ContentAssistCommandAdapter.java:78)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.GeneratedMethodAccessor135.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 51 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-09-04 23:56:28.873
+!MESSAGE Transport operation failed.
+
+!ENTRY org.eclipse.recommenders.snipmatch.rcp 2 0 2015-09-04 23:56:29.451
+!MESSAGE Failure to update the snippet repository (http://git.eclipse.org/gitroot/recommenders/org.eclipse.recommenders.snipmatch.snippets.git). You are working with a previously downloaded version that may not be up to date. Original error message: Could not connect to remote repository. Your internet connection may be down.
+!STACK 0
+org.eclipse.recommenders.snipmatch.GitSnippetRepository$GitUpdateException: Could not connect to remote repository. Your internet connection may be down.
+	at org.eclipse.recommenders.snipmatch.GitSnippetRepository.createException(GitSnippetRepository.java:124)
+	at org.eclipse.recommenders.snipmatch.GitSnippetRepository.open(GitSnippetRepository.java:101)
+	at org.eclipse.recommenders.internal.snipmatch.rcp.EclipseGitSnippetRepository$1.run(EclipseGitSnippetRepository.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.jgit.api.errors.TransportException: http://git.eclipse.org/gitroot/recommenders/org.eclipse.recommenders.snipmatch.snippets.git: cannot open git-upload-pack
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:139)
+	at org.eclipse.recommenders.snipmatch.GitSnippetRepository.fetch(GitSnippetRepository.java:187)
+	at org.eclipse.recommenders.snipmatch.GitSnippetRepository.open(GitSnippetRepository.java:82)
+	... 2 more
+Caused by: org.eclipse.jgit.errors.TransportException: http://git.eclipse.org/gitroot/recommenders/org.eclipse.recommenders.snipmatch.snippets.git: cannot open git-upload-pack
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:521)
+	at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:309)
+	at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:136)
+	at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:122)
+	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1111)
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:130)
+	... 4 more
+Caused by: java.net.UnknownHostException: git.eclipse.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$6.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$6.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.AccessController.doPrivileged(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.access$200(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection$9.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.AccessController.doPrivileged(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at org.eclipse.jgit.transport.http.JDKHttpConnection.getResponseCode(JDKHttpConnection.java:98)
+	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:168)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:475)
+	... 9 more
+
+!ENTRY org.eclipse.ui 4 0 2015-09-04 23:59:52.514
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.core.runtime.AssertionFailedException: assertion failed: )
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.setReplacementLength(AbstractJavaCompletionProposal.java:694)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeCompletionProposal.<init>(TypeCompletionProposal.java:66)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeCompletionProposal.<init>(TypeCompletionProposal.java:57)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.addProposalToCollection(TypePackageCompletionProcessor.java:247)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor$1.acceptType(TypePackageCompletionProcessor.java:194)
+	at org.eclipse.jdt.internal.core.search.TypeNameRequestorWrapper.acceptType(TypeNameRequestorWrapper.java:45)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine$3.acceptIndexMatch(BasicSearchEngine.java:1125)
+	at org.eclipse.jdt.core.search.SearchPattern.acceptMatch(SearchPattern.java:298)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2321)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:273)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:109)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:65)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:277)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1136)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:746)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.generateTypeProposals(TypePackageCompletionProcessor.java:199)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.generateProposals(TypePackageCompletionProcessor.java:121)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.generateTypePackageProposals(TypePackageCompletionProcessor.java:76)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeContentProposalProvider.generateContentProposals(TypeContentProposalProvider.java:120)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeContentProposalProvider.getProposals(TypeContentProposalProvider.java:80)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.getProposals(ContentProposalAdapter.java:2057)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.openProposalPopup(ContentProposalAdapter.java:1903)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.access$16(ContentProposalAdapter.java:1898)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter$3$1.run(ContentProposalAdapter.java:2082)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2015-09-05 00:01:49.222
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.core.runtime.AssertionFailedException: assertion failed: )
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.setReplacementLength(AbstractJavaCompletionProposal.java:694)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeCompletionProposal.<init>(TypeCompletionProposal.java:66)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeCompletionProposal.<init>(TypeCompletionProposal.java:57)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.addProposalToCollection(TypePackageCompletionProcessor.java:247)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor$1.acceptType(TypePackageCompletionProcessor.java:194)
+	at org.eclipse.jdt.internal.core.search.TypeNameRequestorWrapper.acceptType(TypeNameRequestorWrapper.java:45)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine$3.acceptIndexMatch(BasicSearchEngine.java:1125)
+	at org.eclipse.jdt.core.search.SearchPattern.acceptMatch(SearchPattern.java:298)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2321)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:273)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:109)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:65)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:277)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1136)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:746)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.generateTypeProposals(TypePackageCompletionProcessor.java:199)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.generateProposals(TypePackageCompletionProcessor.java:121)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypePackageCompletionProcessor.generateTypePackageProposals(TypePackageCompletionProcessor.java:76)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeContentProposalProvider.generateContentProposals(TypeContentProposalProvider.java:120)
+	at org.eclipse.pde.internal.ui.editor.contentassist.TypeContentProposalProvider.getProposals(TypeContentProposalProvider.java:80)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.getProposals(ContentProposalAdapter.java:2057)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.openProposalPopup(ContentProposalAdapter.java:1903)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.access$16(ContentProposalAdapter.java:1898)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter$3$1.run(ContentProposalAdapter.java:2082)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 23 more
+!SESSION 2015-09-05 10:54:42.667 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.rcp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.rcp.product
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2015-09-05 10:54:50.561
+!MESSAGE Nothing to merge for "platform:/plugin/org.eclipse.e4.tools.emf.ui/fragment.e4xmi"
+
+!ENTRY org.eclipse.e4.ui.workbench 1 0 2015-09-05 10:54:50.561
+!MESSAGE Nothing to merge for "platform:/plugin/org.eclipse.e4.tools.emf.ui/fragment.e4xmi"
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-05 10:55:03.823
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-05 10:55:03.823
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tozabloc'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

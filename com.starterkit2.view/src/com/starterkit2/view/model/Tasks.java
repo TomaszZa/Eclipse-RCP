@@ -4,9 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tasks extends ModelObject{
+	private static Tasks instance = new Tasks();
 	private List<Task> actualTasks = new ArrayList<Task>();
 	private List<Task> madeTasks = new ArrayList<Task>();
 	private Task toEditOrDelete;
+	
+	private Tasks(){	
+	}
+	public static Tasks getInstance(){
+		return instance;
+	}
 	
 	public Task getToEditOrDelete(){
 		return toEditOrDelete;
