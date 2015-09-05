@@ -1,6 +1,7 @@
 package com.starterkit2.view;
 
 
+
 import java.util.ArrayList;
 
 import org.eclipse.swt.widgets.Composite;
@@ -10,6 +11,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -25,6 +27,7 @@ import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.BeanProperties;
 import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.ViewerSupport;
 import org.eclipse.jface.viewers.ColumnViewerEditor;
@@ -167,6 +170,17 @@ public class ToDoList extends ViewPart {
 	    	}
 		});
 	    btnMadeTask.setText("Add Made");
+	    ///////////////////////// To work popup
+	    MenuManager menuManager = new MenuManager();
+	    Menu menu = menuManager.createContextMenu(tableViewer.getTable());
+	    // set the menu on the SWT widget
+	    tableViewer.getTable().setMenu(menu);
+	    // register the menu with the framework
+	    getSite().registerContextMenu(menuManager, tableViewer);
+	    
+	    // make the viewer selection available
+	    getSite().setSelectionProvider(tableViewer);
+	    /////////////////
 	}
 	
 	@Override

@@ -4,7 +4,6 @@
 <fullyQualifiedTypeName name="com.starterkit2.view.model.Person"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.starterkit2.view.model.ModelObject"/>
-<fullyQualifiedTypeName name="org.eclipse.jface.viewers.IStructuredSelection"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.viewers.SelectionChangedEvent"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.viewers.ISelectionChangedListener"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -25,4 +24,11 @@
 <fullyQualifiedTypeName name="org.eclipse.swt.events.SelectionAdapter"/>
 <fullyQualifiedTypeName name="com.starterkit2.view.model.Tasks"/>
 <fullyQualifiedTypeName name="com.starterkit2.view.handlers.AddHandler"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.ISelection"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.handlers.HandlerUtil"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.viewers.IStructuredSelection"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.action.MenuManager"/>
+<fullyQualifiedTypeName name="java.awt.Menu"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Menu"/>
 </qualifiedTypeNameHistroy>

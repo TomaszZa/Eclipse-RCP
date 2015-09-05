@@ -100,6 +100,49 @@
                style="pulldown">
          </command>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:com.starterkit2.view.view1">
+         <command
+               commandId="com.starterkit2.view.command"
+               label="Add"
+               style="push">
+         </command>
+         <command
+               commandId="com.starterkit2.view.command1"
+               label="Delete"
+               style="push">
+         </command>
+         <command
+               commandId="com.starterkit2.view.command2"
+               label="Modify"
+               style="push">
+         </command>
+         <command
+               commandId="com.starterkit2.view.command3"
+               label="Add Made"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.starterkit2.view.handlers.AddHandler"
+            commandId="com.starterkit2.view.handlers.AddHandler">
+      </handler>
+      <handler
+            class="com.starterkit2.view.handlers.ModifyHandler"
+            commandId="com.starterkit2.view.handlers.ModifyHandler">
+      </handler>
+      <handler
+            class="com.starterkit2.view.handlers.AddMadeHandler"
+            commandId="com.starterkit2.view.handlers.AddMadeHandler">
+      </handler>
+      <handler
+            class="com.starterkit2.view.handlers.DeleteHandler"
+            commandId="com.starterkit2.view.handlers.DeleteHandler">
+      </handler>
    </extension>
 
 </plugin>
