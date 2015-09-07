@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.starterkit2.view.ToDoList&apos; to &apos;ToDoListView&apos;&#x0D;&#x0A;- Original project: &apos;com.starterkit2.view&apos;&#x0D;&#x0A;- Original element: &apos;com.starterkit2.view.ToDoList&apos;&#x0D;&#x0A;- Renamed element: &apos;com.starterkit2.view.ToDoListView&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ToDoList&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.starterkit2.view{ToDoList.java[ToDoList" matchStrategy="1" name="ToDoListView" qualified="false" references="true" similarDeclarations="false" stamp="1441610748911" textual="false" version="1.0"/>
+</session>

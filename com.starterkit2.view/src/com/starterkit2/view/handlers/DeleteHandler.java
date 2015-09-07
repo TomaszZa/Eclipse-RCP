@@ -5,6 +5,8 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.commands.IHandlerListener;
 
+import com.starterkit2.view.model.Tasks;
+
 public class DeleteHandler implements IHandler {
 
 	@Override
@@ -21,20 +23,22 @@ public class DeleteHandler implements IHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		// TODO Auto-generated method stub
+		Tasks tasks = Tasks.getInstance();
+		tasks.getActualTasks().remove(tasks.getToEditOrDelete());
+		tasks.getTableViewerForFirstTable().refresh();
 		return null;
 	}
 
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isHandled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override

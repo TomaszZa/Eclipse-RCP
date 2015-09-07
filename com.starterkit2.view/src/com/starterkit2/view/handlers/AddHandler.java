@@ -30,21 +30,21 @@ public class AddHandler implements IHandler {
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		Tasks tasks = Tasks.getInstance();
-		tasks.addTaskToActualTasks(new Task("asjkasj"));
-		//tableViewer.refresh();
+		tasks.addTaskToActualTasks(new Task(tasks.getShareToHandlersTask().getTaskName()));
+		tasks.getTableViewerForFirstTable().refresh();
 		return null;
 	}
 
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isHandled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
